@@ -9,6 +9,6 @@ Please create multiple branches to accommodate student assignments for each topi
 
 For students:
 
-Please clone this repo so you can upload/push assignments into the branches that have been provided according to the learning activities each topic.
+Please clone this repo so you can upload/push assignments into the branches that have been provided according to the learning activities for each topic.
 Thank you!
 Happy coding! Cheers ;)
