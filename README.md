@@ -5,7 +5,7 @@ Let's connect and collaborate!
 
 Ps. For facilitators:
 
-Please create some branches to accommodate student assignments every topic and remind students to do a Pull Request before pushing their assignments. Example of the structure: branch "0_Java Introduction" has several student folders in this class and so on (please check our Curriculum - Standar Kompetensi)..
+Please create multiple branches to accommodate student assignments for each topic and remind students to make a Pull Request before pushing their assignments. Example of the structure: the branch "0_Java Introduction" has several student folders in this class and so on.. (please check our Curriculum - Standar Kompetensi)
 
 For students:
 
