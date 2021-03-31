@@ -1,0 +1,38 @@
+//  query untuk membuat database di postgres
+CREATE DATABASE inventory;
+
+// query untuk membuat user di postgres
+
+CREATE USER upi WITH PASSWORD 'ganteng';
+
+// query ketika create table barang
+CREATE TABLE barang(id SERIAL PRIMARY KEY, nama VARCHAR(50), qty INTEGER(3));
+
+// query ketika create table kategori
+CREATE TABLE kategori(id SERIAL PRIMARY KEY, nama VARCHAR(50));
+
+// query ketika CRUD di tabel barang
+// Create
+INSERT INTO barang(nama, qty) values('Indomie Goreng', 10),('Indomilk Coklat', 15);
+
+// Read
+SELECT * FROM barang;
+
+// Update
+UPDATE barang SET qty = 5 WHERE id = 2;
+
+// Delete
+DELETE FROM barang WHERE nama = 'Indomie Goreng';
+
+//  query ketika CRUD di table kategori
+// Create
+INSERT INTO kategori(nama) values('Mie Instan'),('Susu');
+
+// Read
+SELECT * FROM kategori;
+
+// Update
+UPDATE kategori SET nama = 'Susu UHT' WHERE id = 2;
+
+// Delete
+DELETE FROM barang WHERE id = 1;
