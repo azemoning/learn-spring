@@ -1,0 +1,26 @@
+// Case 1
+SELECT * FROM employee WHERE name LIKE 'S%';
+
+// Case 2
+SELECT name, Address, SALARY FROM employee LEFT JOIN division ON employee.division_id = division.id;
+
+// Case 3
+SELECT name, MAX(salary) AS salary FROM employee;
+
+// Case 4
+SELECT name, MIN(salary) AS salary FROM employee;
+
+// Case 5
+SELECT * FROM employee INNER JOIN division ON employee.division_id = division.id;
+
+// Case 6
+SELECT division_name FROM division LEFT JOIN employee ON division.id = employee.division_id GROUP BY division_name;
+
+// Case 7
+SELECT name, salary FROM employee ORDER BY salary;
+
+// Case 8
+SELECT name, salary FROM employee ORDER BY salary DESC;
+
+// Case 9
+SELECT * FROM employee LIMIT 5
