@@ -12,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("api/v1")
 public class AssetsController {
@@ -26,6 +28,12 @@ public class AssetsController {
         Pageable pageable = PageRequest.of(page, size, Sort.by(sort));
         Page<Assets> paginatedAssets = assetsRepository.findAll(pageable);
         return new ResponseEntity<>(paginatedAssets, HttpStatus.OK);
+    }
+
+    @GetMapping("/assets/search")
+    public ResponseEntity<Object> getSearchAssets(@RequestParam(defaultValue = "") String q) {
+        Optional<Assets> assetsList = assetsRepository.findBy(q);
+        return new ResponseEntity<>(assetsList, HttpStatus.OK);
     }
 
     @PostMapping("/assets")
