@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Catalog Makanan</th>
+        </tr>
+        <tr th:each="catalog : ${catalogs}">
+            <td th:text="${catalog}">Catalog</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <a href="/">Kembali ke halaman awal</a>
+</body>
+</html>
