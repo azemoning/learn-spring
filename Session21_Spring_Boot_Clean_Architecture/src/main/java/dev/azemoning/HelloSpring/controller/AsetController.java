@@ -1,7 +1,10 @@
 package dev.azemoning.HelloSpring.controller;
 
 import dev.azemoning.HelloSpring.model.Aset;
+import dev.azemoning.HelloSpring.model.Kategori;
 import dev.azemoning.HelloSpring.service.AsetServiceImpl;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,11 +12,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1")
+@Api(tags = "Aset", value = "Aset Resource Operation")
 public class AsetController {
     @Autowired
     private AsetServiceImpl asetService;
 
     @GetMapping("/aset")
+    @ApiOperation(value = "Get All Asets")
     public ResponseEntity<Object> getAllAset() {
         return new ResponseEntity<>(asetService.getAsetList(), HttpStatus.OK);
     }
